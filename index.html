@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAM Producciones Lebu | Productora de Eventos</title>
+  <meta name="description" content="GAM Producciones, productora de eventos en Lebu, Chile. Amplificación, iluminación, DJ y animación, plataforma 360°, chispa fría, fotografía y producción integral. Booking 2026.">
+  <meta name="theme-color" content="#070707">
+  <meta property="og:title" content="GAM Producciones Lebu | Booking 2026">
+  <meta property="og:description" content="Creamos experiencias. Generamos emociones. Sonido, iluminación, DJ, plataforma 360° y producción integral para tu evento.">
+  <meta property="og:image" content="https://gam-producciones-lebu.netlify.app/assets/booking-2026.jpg">
+  <meta property="og:url" content="https://gam-producciones-lebu.netlify.app/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://gam-producciones-lebu.netlify.app/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070707'/%3E%3Cpath d='M32 12 52 50H12z' fill='%23e3121b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070707;
+      --surface: #0f0f10;
+      --surface-2: #161618;
+      --line: rgba(255, 255, 255, .09);
+      --line-strong: rgba(255, 255, 255, .16);
+      --red: #e3121b;
+      --red-bright: #ff2b2b;
+      --red-glow: rgba(227, 18, 27, .45);
+      --text: #f5f5f5;
+      --muted: #a9a9ad;
+      --dim: #74747a;
+      --radius: 14px;
+      --wrap: 1200px;
+      --display: "Oswald", "Arial Narrow", sans-serif;
+      --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--red-bright); outline-offset: 3px; border-radius: 6px; }
+
+    .wrap { width: min(var(--wrap), 100% - 32px); margin-inline: auto; }
+    .icon { width: 1em; height: 1em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    /* ---------- Shared bits ---------- */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--display); font-weight: 500; font-size: 14px;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--red-bright);
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--red); }
+    .section { padding: 112px 0; position: relative; }
+    .section-head { max-width: 720px; margin-bottom: 56px; }
+    .section-head h2 {
+      margin: 14px 0 12px; font-family: var(--display); font-weight: 600;
+      font-size: clamp(34px, 5vw, 56px); line-height: 1.05; text-transform: uppercase; letter-spacing: .01em;
+    }
+    .section-head p { margin: 0; color: var(--muted); font-size: 18px; }
+    .red { color: var(--red); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 50px; padding: 0 26px; border-radius: 999px; border: 1px solid transparent;
+      font-family: var(--display); font-weight: 500; font-size: 16px; letter-spacing: .1em; text-transform: uppercase;
+      cursor: pointer; transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .btn .icon { font-size: 20px; }
+    .btn-primary { background: var(--red); color: #fff; box-shadow: 0 10px 30px -10px var(--red-glow); }
+    .btn-primary:hover { background: var(--red-bright); transform: translateY(-2px); box-shadow: 0 16px 40px -12px var(--red-glow); }
+    .btn-ghost { border-color: var(--line-strong); background: rgba(255,255,255,.03); }
+    .btn-ghost:hover { border-color: var(--red); background: rgba(227,18,27,.08); transform: translateY(-2px); }
+
+    .pulse-line { display: block; width: 100%; height: 28px; color: var(--red); }
+    .pulse-line path { fill: none; stroke: currentColor; stroke-width: 2; filter: drop-shadow(0 0 6px var(--red-glow)); }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: fixed; inset: 0 0 auto; z-index: 50;
+      transition: background-color .3s ease, border-color .3s ease, backdrop-filter .3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .site-header.scrolled { background: rgba(7,7,7,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px; }
+    .brand img { height: 50px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a:not(.btn) {
+      font-family: var(--display); font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: #d8d8da;
+      position: relative; padding: 6px 0; transition: color .2s;
+    }
+    .nav-links a:not(.btn)::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--red);
+      transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+    }
+    .nav-links a:not(.btn):hover, .nav-links a.active { color: #fff; }
+    .nav-links a:not(.btn):hover::after, .nav-links a.active::after { transform: scaleX(1); }
+    .nav-links .btn { min-height: 42px; padding: 0 20px; font-size: 14px; }
+    .menu-toggle { display: none; background: none; border: 1px solid var(--line-strong); border-radius: 10px; width: 44px; height: 44px; align-items: center; justify-content: center; cursor: pointer; }
+    .menu-toggle .icon { font-size: 22px; }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 80px; overflow: hidden; isolation: isolate; }
+    .hero-bg { position: absolute; inset: 0; z-index: -2; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: blur(4px) saturate(1.2); transform: scale(1.06); opacity: .42; }
+    .hero-bg::after {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 30%, rgba(227,18,27,.25), transparent 70%),
+        linear-gradient(90deg, var(--bg) 0%, rgba(7,7,7,.86) 45%, rgba(7,7,7,.55) 100%),
+        linear-gradient(0deg, var(--bg) 0%, transparent 35%);
+    }
+    .beams { position: absolute; inset: -20% 0 auto; height: 120%; z-index: -1; pointer-events: none; overflow: hidden; }
+    .beam {
+      position: absolute; top: -10%; width: 180px; height: 130%;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,43,43,.08) 45%, transparent 75%);
+      clip-path: polygon(46% 0, 54% 0, 100% 100%, 0 100%);
+      transform-origin: 50% 0; filter: blur(2px); mix-blend-mode: screen;
+      animation: sweep 9s ease-in-out infinite alternate;
+    }
+    .beam:nth-child(1) { left: 52%; animation-delay: -2s; }
+    .beam:nth-child(2) { left: 66%; animation-duration: 11s; background: linear-gradient(180deg, rgba(255,43,43,.32), rgba(255,43,43,.06) 50%, transparent 75%); }
+    .beam:nth-child(3) { left: 80%; animation-delay: -5s; animation-duration: 8s; }
+    .beam:nth-child(4) { left: 92%; animation-duration: 12s; background: linear-gradient(180deg, rgba(255,43,43,.28), transparent 70%); }
+    @keyframes sweep { from { transform: rotate(-22deg); } to { transform: rotate(22deg); } }
+
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+    .hero h1 { margin: 22px 0 10px; font-family: var(--display); font-weight: 700; font-size: clamp(64px, 11vw, 148px); line-height: .88; letter-spacing: -.005em; text-transform: uppercase; }
+    .hero h1 .red { text-shadow: 0 0 40px var(--red-glow); }
+    .hero .tagline { font-family: var(--display); font-weight: 400; font-size: clamp(20px, 2.6vw, 28px); letter-spacing: .14em; text-transform: uppercase; margin: 18px 0 0; color: #e9e9ea; }
+    .hero .disciplines { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 18px 0 36px; padding: 0; list-style: none; font-family: var(--display); font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+    .hero .disciplines li { display: flex; align-items: center; gap: 14px; }
+    .hero .disciplines li + li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .hero-visual { position: relative; }
+    .hero-visual .frame {
+      position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line-strong);
+      box-shadow: 0 40px 80px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(227,18,27,.15), 0 0 80px -20px var(--red-glow);
+      transform: perspective(1200px) rotateY(-8deg) rotateX(3deg); transition: transform .6s ease;
+    }
+    .hero-visual .frame:hover { transform: perspective(1200px) rotateY(0) rotateX(0); }
+    .hero-visual .frame img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .hero-visual .badge {
+      position: absolute; left: -22px; bottom: -26px; background: rgba(15,15,16,.92); backdrop-filter: blur(10px);
+      border: 1px solid var(--line-strong); border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 14px;
+    }
+    .hero-visual .badge strong { font-family: var(--display); font-size: 34px; line-height: 1; color: var(--red-bright); }
+    .hero-visual .badge span { font-size: 13px; line-height: 1.3; color: var(--muted); }
+    .hero-visual .live {
+      position: absolute; top: 14px; right: 14px; display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--display); font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+      background: rgba(0,0,0,.6); border: 1px solid var(--line-strong); padding: 6px 12px; border-radius: 999px;
+    }
+    .hero-visual .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red-bright); box-shadow: 0 0 0 0 var(--red-glow); animation: ping 1.6s infinite; }
+    @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(255,43,43,.7); } 100% { box-shadow: 0 0 0 10px rgba(255,43,43,0); } }
+
+    .hero-stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 40px; margin-top: 54px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .hero-stats strong { display: block; font-family: var(--display); font-weight: 600; font-size: 38px; line-height: 1; }
+    .hero-stats div > span { display: block; font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+
+    /* ---------- Marquee ---------- */
+    .marquee-clip { position: relative; z-index: 2; overflow: hidden; padding-block: 24px; margin-block: -24px; }
+    .marquee { background: var(--red); color: #fff; overflow: hidden; border-block: 1px solid rgba(255,255,255,.15); transform: rotate(-1.2deg); margin: 0 -10px; position: relative; z-index: 2; box-shadow: 0 20px 50px -20px var(--red-glow); }
+    .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+    .marquee ul { display: flex; margin: 0; padding: 16px 0; list-style: none; }
+    .marquee li { display: flex; align-items: center; gap: 28px; padding-right: 28px; font-family: var(--display); font-weight: 600; font-size: 20px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+    .marquee li::after { content: ""; width: 9px; height: 9px; background: #fff; transform: rotate(45deg); }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* ---------- Services ---------- */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      position: relative; display: flex; flex-direction: column; background: linear-gradient(180deg, var(--surface-2), var(--surface));
+      border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    .card:hover { transform: translateY(-6px); border-color: rgba(227,18,27,.55); box-shadow: 0 30px 60px -30px var(--red-glow); }
+    .card-media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+    .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .card:hover .card-media img { transform: scale(1.06); }
+    .card-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--surface-2) 2%, transparent 55%); }
+    .card-top { position: relative; }
+    .card-icon {
+      position: absolute; left: 22px; bottom: -26px; z-index: 2; width: 56px; height: 56px; border-radius: 50%;
+      display: grid; place-items: center; background: var(--bg); border: 2px solid var(--red); color: var(--red-bright);
+      box-shadow: 0 0 24px -4px var(--red-glow); font-size: 26px;
+    }
+    .card-body { padding: 42px 24px 28px; flex: 1; }
+    .card h3 { margin: 0 0 18px; font-family: var(--display); font-weight: 600; text-transform: uppercase; line-height: 1.1; }
+    .card h3 .num { color: var(--red); font-size: 26px; }
+    .card h3 .t1 { color: var(--red); font-size: 26px; letter-spacing: .02em; }
+    .card h3 .t2 { display: block; font-weight: 400; font-size: 20px; letter-spacing: .08em; color: #eaeaea; margin-top: 2px; }
+    .card h4 { margin: 18px 0 8px; font-family: var(--display); font-weight: 500; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--red-bright); }
+    .card h4:first-of-type { margin-top: 0; }
+    .list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+    .list li { position: relative; padding-left: 20px; color: #d4d4d7; font-size: 15px; line-height: 1.45; }
+    .list li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--red); box-shadow: 0 0 8px var(--red-glow); }
+    .list li.note { color: var(--dim); font-style: italic; }
+    .list li.note::before { background: var(--dim); box-shadow: none; }
+
+    /* ---------- Integral production ---------- */
+    .integral { background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(227,18,27,.14), transparent 70%), var(--surface); border-block: 1px solid var(--line); }
+    .integral-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .integral-media { position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line-strong); box-shadow: 0 0 90px -30px var(--red-glow); }
+    .integral-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .integral-media .tag { position: absolute; left: 18px; top: 18px; font-family: var(--display); font-weight: 700; font-size: 64px; line-height: 1; color: rgba(255,255,255,.92); text-shadow: 0 4px 30px rgba(0,0,0,.6); }
+    .integral-media .tag span { color: var(--red); }
+    .integral .lead { font-size: 19px; color: #dcdcde; margin: 0 0 30px; }
+    .chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 18px; padding: 0; list-style: none; }
+    .chips li {
+      display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 10px; text-align: center;
+      border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.02);
+      font-family: var(--display); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: #e4e4e6;
+      transition: border-color .25s, background-color .25s, transform .25s;
+    }
+    .chips li:hover { border-color: rgba(227,18,27,.6); background: rgba(227,18,27,.07); transform: translateY(-3px); }
+    .chips .icon { font-size: 30px; color: var(--red-bright); stroke-width: 1.5; }
+    .fineprint { font-size: 13px; color: var(--dim); margin: 0 0 30px; }
+
+    /* ---------- Events ---------- */
+    .events { overflow: hidden; isolation: isolate; }
+    .events-bg { position: absolute; inset: 0; z-index: -1; }
+    .events-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .34; filter: blur(1.5px) saturate(1.2); transform: scale(1.03); }
+    .events-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--bg) 0%, rgba(7,7,7,.7) 40%, rgba(7,7,7,.7) 60%, var(--bg) 100%); }
+    .events-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .event {
+      position: relative; padding: 30px 20px 26px; border-radius: var(--radius); text-align: center;
+      background: rgba(15,15,16,.75); border: 1px solid var(--line); backdrop-filter: blur(6px);
+      transition: transform .3s ease, border-color .3s ease, background-color .3s ease;
+    }
+    .event:hover { transform: translateY(-6px); border-color: var(--red); background: rgba(40,8,10,.7); }
+    .event .ring {
+      width: 76px; height: 76px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center;
+      border: 2px solid var(--red); color: var(--red-bright); font-size: 34px; box-shadow: inset 0 0 20px -6px var(--red-glow), 0 0 20px -6px var(--red-glow);
+    }
+    .event .ring .icon { stroke-width: 1.5; }
+    .event h3 { margin: 0; font-family: var(--display); font-weight: 500; font-size: 18px; letter-spacing: .1em; text-transform: uppercase; line-height: 1.25; }
+    .events-note { margin: 34px 0 0; text-align: center; font-size: 18px; color: var(--muted); }
+    .events-note strong { color: #fff; font-weight: 600; }
+
+    /* ---------- Why GAM ---------- */
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+    .value { padding: 34px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; gap: 18px; transition: background-color .3s; }
+    .value:nth-child(3n) { border-right: 0; }
+    .value:nth-last-child(-n+3) { border-bottom: 0; }
+    .value:hover { background: rgba(227,18,27,.05); }
+    .value .icon { font-size: 38px; color: var(--red-bright); stroke-width: 1.4; margin-top: 2px; }
+    .value h3 { margin: 0 0 6px; font-family: var(--display); font-weight: 600; font-size: 20px; letter-spacing: .1em; text-transform: uppercase; color: var(--red-bright); }
+    .value p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* ---------- Social ---------- */
+    .social { background: var(--surface); border-block: 1px solid var(--line); }
+    .social-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
+    .profile { display: flex; align-items: center; gap: 18px; margin: 28px 0 22px; }
+    .profile .avatar { width: 74px; height: 74px; border-radius: 50%; padding: 3px; background: conic-gradient(from 200deg, var(--red), #ff8a3d, var(--red-bright), #8b0000, var(--red)); flex: none; }
+    .profile .avatar span { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 50%; background: var(--bg); border: 3px solid var(--bg); font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .02em; }
+    .profile .avatar span b { color: var(--red); font-weight: 700; }
+    .profile strong { display: block; font-size: 18px; }
+    .profile small { color: var(--muted); font-size: 14px; }
+    .bio { margin: 0 0 28px; padding: 0; list-style: none; display: grid; gap: 8px; color: #d9d9db; }
+    .bio li { display: flex; align-items: center; gap: 12px; }
+    .bio .icon { color: var(--red-bright); font-size: 18px; }
+    .social-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 18px; }
+    .highlight { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+    .highlight .story {
+      width: 108px; height: 108px; border-radius: 50%; padding: 3px; display: block;
+      background: conic-gradient(from 200deg, var(--red), #ff8a3d, var(--red-bright), #8b0000, var(--red));
+      transition: transform .3s ease;
+    }
+    .highlight:hover .story { transform: scale(1.06) rotate(-4deg); }
+    .highlight .story span { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 50% 35%, #2a0b0d, var(--bg) 70%); border: 4px solid var(--surface); color: #fff; font-size: 38px; }
+    .highlight .story .icon { stroke-width: 1.4; }
+    .highlight b { font-family: var(--display); font-weight: 500; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; }
+
+    /* ---------- Booking flyer ---------- */
+    .flyer { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
+    .flyer-img { position: relative; border-radius: 16px; overflow: hidden; border: 1px solid var(--line-strong); box-shadow: 0 50px 100px -40px rgba(0,0,0,.9), 0 0 70px -25px var(--red-glow); max-height: 640px; }
+    .flyer-img img { width: 100%; }
+    .flyer-img::after { content: ""; position: absolute; inset: auto 0 0; height: 40%; background: linear-gradient(0deg, var(--bg), transparent); }
+    .flyer h2 { font-family: var(--display); font-weight: 700; font-size: clamp(48px, 7vw, 96px); line-height: .9; text-transform: uppercase; margin: 14px 0 20px; }
+    .flyer p { color: var(--muted); font-size: 18px; margin: 0 0 30px; max-width: 520px; }
+
+    /* ---------- Contact ---------- */
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+    .contact-info h2 { font-family: var(--display); font-weight: 600; font-size: clamp(40px, 6vw, 64px); line-height: 1; text-transform: uppercase; margin: 14px 0 8px; }
+    .contact-info .pulse-line { max-width: 320px; margin-bottom: 28px; }
+    .contact-list { list-style: none; margin: 0 0 32px; padding: 0; display: grid; gap: 12px; }
+    .contact-list li > a, .contact-list li > div {
+      display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 12px;
+      border: 1px solid var(--line); background: var(--surface); transition: border-color .25s, background-color .25s, transform .25s;
+    }
+    .contact-list a:hover { border-color: var(--red); background: rgba(227,18,27,.06); transform: translateX(4px); }
+    .contact-list .icon { font-size: 22px; color: var(--red-bright); }
+    .contact-list small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+    .contact-list .ct { min-width: 0; }
+    .contact-list b { display: block; font-weight: 500; overflow-wrap: anywhere; }
+
+    .form {
+      background: linear-gradient(180deg, var(--surface-2), var(--surface)); border: 1px solid var(--line); border-radius: 18px; padding: 34px;
+      box-shadow: 0 40px 80px -40px rgba(0,0,0,.8);
+    }
+    .form h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 600; font-size: 28px; letter-spacing: .04em; text-transform: uppercase; }
+    .form > p { margin: 0 0 24px; color: var(--muted); font-size: 15px; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: grid; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label, .field legend { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #cfcfd2; padding: 0; }
+    .field input:not([type=checkbox]), .field select, .field textarea {
+      width: 100%; min-height: 48px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line-strong);
+      background: #0b0b0c; transition: border-color .2s, box-shadow .2s; color-scheme: dark;
+    }
+    .field textarea { min-height: 110px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(227,18,27,.2); }
+    .field input::placeholder, .field textarea::placeholder { color: #5f5f66; }
+    fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
+    .checks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
+    .checks label { position: relative; cursor: pointer; }
+    .checks input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
+    .checks span {
+      display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-strong);
+      font-size: 14px; color: #d4d4d7; transition: all .2s; user-select: none;
+    }
+    .checks input:checked + span { background: var(--red); border-color: var(--red); color: #fff; }
+    .checks input:focus-visible + span { outline: 2px solid var(--red-bright); outline-offset: 2px; }
+    .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .form-actions .btn { flex: 1 1 200px; }
+    .form-hint { margin: 14px 0 0; font-size: 13px; color: var(--dim); }
+
+    /* ---------- Footer ---------- */
+    .site-footer { border-top: 1px solid var(--line); padding: 56px 0 36px; background: #050505; }
+    .footer-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+    .footer-top img { height: 74px; width: auto; }
+    .footer-top .slogan { font-family: var(--display); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); font-size: 14px; margin-top: 8px; }
+    .socials { display: flex; gap: 10px; }
+    .socials a { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line-strong); font-size: 20px; transition: all .25s; }
+    .socials a:hover { background: var(--red); border-color: var(--red); transform: translateY(-3px); }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--dim); }
+    .footer-bottom nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-bottom nav a:hover { color: #fff; }
+
+    .wa-float {
+      position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 60px; height: 60px; border-radius: 50%;
+      display: grid; place-items: center; background: #25d366; color: #fff; font-size: 30px;
+      box-shadow: 0 12px 30px -8px rgba(37,211,102,.6); transition: transform .25s;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float .icon { fill: currentColor; stroke: none; }
+
+    /* ---------- Reveal ---------- */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; transition-delay: var(--d, 0s); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1080px) {
+      .events-grid { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 960px) {
+      .section { padding: 84px 0; }
+      .hero-grid, .integral-grid, .social-grid, .flyer, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { max-width: 560px; }
+      .hero-visual .frame { transform: none; }
+      .hero-visual .badge { left: 12px; }
+      .values { grid-template-columns: 1fr 1fr; }
+      .value:nth-child(3n) { border-right: 1px solid var(--line); }
+      .value:nth-child(2n) { border-right: 0; }
+      .value:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+      .value:nth-last-child(-n+2) { border-bottom: 0; }
+      .flyer-img { max-width: 420px; max-height: 520px; }
+
+      .menu-toggle { display: inline-flex; }
+      .nav-links {
+        position: fixed; inset: 76px 0 auto; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 16px 24px;
+        background: rgba(7,7,7,.97); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+        transform: translateY(-12px); opacity: 0; visibility: hidden; transition: all .25s ease;
+      }
+      .nav-links.open { transform: none; opacity: 1; visibility: visible; }
+      .nav-links a:not(.btn) { padding: 16px 4px; border-bottom: 1px solid var(--line); font-size: 17px; }
+      .nav-links a:not(.btn)::after { display: none; }
+      .nav-links .btn { margin-top: 18px; min-height: 50px; }
+    }
+    @media (max-width: 640px) {
+      .brand img { height: 42px; }
+      .hero { padding-top: 110px; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .hero-stats strong { font-size: 30px; }
+      .hero-ctas .btn { flex: 1 1 100%; }
+      .services-grid { grid-template-columns: 1fr; }
+      .events-grid { grid-template-columns: 1fr 1fr; }
+      .events-grid .event:last-child { grid-column: 1 / -1; }
+      .values { grid-template-columns: 1fr; }
+      .value, .value:nth-child(3n), .value:nth-child(2n) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .value:last-child { border-bottom: 0; }
+      .chips { grid-template-columns: repeat(2, 1fr); }
+      .highlights { grid-template-columns: repeat(3, 1fr); gap: 20px 10px; }
+      .highlight .story { width: 86px; height: 86px; }
+      .highlight .story span { font-size: 30px; }
+      .highlight b { font-size: 13px; }
+      .fields { grid-template-columns: 1fr; }
+      .form { padding: 24px 18px; }
+      .integral-media .tag { font-size: 48px; }
+      .footer-top img { height: 60px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-speaker" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M12 6h.01M12 14h.01"/></symbol>
+      <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6M10 22h4"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+      <symbol id="i-360" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><circle cx="12" cy="12" r="2.5"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65M22 12.65l-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+      <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+      <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="8.5" cy="15" r="5.5"/><circle cx="15.5" cy="15" r="5.5"/><path d="m6.5 5.5 2-2.5 2 2.5-2 2z"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+      <symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10M22 13l-.82-.33c-.86-.34-1.82.2-1.98 1.11-.11.7-.72 1.22-1.43 1.22H17M11 2l.33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></symbol>
+      <symbol id="i-mask" viewBox="0 0 24 24"><path d="M3 6c3.5-1.6 14.5-1.6 18 0 0 7.5-3.5 13-9 13S3 13.5 3 6Z"/><path d="M7.5 10.5c.9-.7 2.1-.7 3 0M13.5 10.5c.9-.7 2.1-.7 3 0M9 14.5c1.8 1.2 4.2 1.2 6 0"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1M2 21h20M7 8v3M12 8v3M17 8v3M7 4h.01M12 4h.01M17 4h.01"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+      <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3M14 2v4M8 10v4M16 18v4"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.53 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.91l5.16-.75a2.12 2.12 0 0 0 1.6-1.16z"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+      <symbol id="i-disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="2"/><path d="M6 12a6 6 0 0 1 6-6"/></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.69 8.24-8.23 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="GAM Producciones, ir al inicio">
+        <img src="assets/logo.webp" alt="GAM Producciones" width="494" height="194">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#produccion">Producción</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#redes">Redes</a>
+        <a class="btn btn-primary" href="#contacto">Cotizar evento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true"><img src="assets/hero.jpg" alt=""></div>
+      <div class="beams" aria-hidden="true"><span class="beam"></span><span class="beam"></span><span class="beam"></span><span class="beam"></span></div>
+
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow reveal">Productora de eventos · Lebu, Chile</span>
+          <h1 class="reveal" style="--d:.08s">Booking <span class="red">2026</span></h1>
+          <p class="tagline reveal" style="--d:.16s">Creamos experiencias.<br>Generamos emociones.</p>
+          <ul class="disciplines reveal" style="--d:.24s">
+            <li>Producción</li><li>Sonido</li><li>Iluminación</li><li>DJ</li><li>Experiencias</li>
+          </ul>
+          <div class="hero-ctas reveal" style="--d:.32s">
+            <a class="btn btn-primary" href="https://wa.me/56957602438?text=Hola%20GAM%20Producciones%2C%20quiero%20cotizar%20un%20evento" target="_blank" rel="noopener">
+              <svg class="icon" style="fill:currentColor;stroke:none"><use href="#i-whatsapp"/></svg> Reserva tu fecha
+            </a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="hero-stats reveal" style="--d:.4s">
+            <div><strong>+<span data-count="100">100</span></strong><span>eventos realizados</span></div>
+            <div><strong><span data-count="8">8</span></strong><span>servicios integrados</span></div>
+            <div><strong><span data-count="360">360</span>°</strong><span>plataforma de video</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.2s">
+          <div class="frame">
+            <img src="assets/hero.jpg" alt="Escenario con iluminación robótica roja y blanca frente al público">
+            <span class="live">En vivo</span>
+          </div>
+          <div class="badge">
+            <strong>A–Z</strong>
+            <span>Sonido, luces, DJ, animación<br>y efectos en un solo equipo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-clip" aria-hidden="true">
+    <div class="marquee">
+      <div class="marquee-track">
+        <ul>
+          <li>Amplificación</li><li>Iluminación</li><li>DJ &amp; Animación</li><li>Plataforma 360°</li><li>Chispa fría</li><li>Fotografía</li><li>Producción musical</li><li>Producción integral</li>
+        </ul>
+        <ul>
+          <li>Amplificación</li><li>Iluminación</li><li>DJ &amp; Animación</li><li>Plataforma 360°</li><li>Chispa fría</li><li>Fotografía</li><li>Producción musical</li><li>Producción integral</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nuestros servicios</span>
+          <h2>Todo lo que tu evento <span class="red">necesita</span></h2>
+          <p>Equipamiento profesional y un equipo que lo opera de principio a fin. Elige un servicio o combínalos todos.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card reveal">
+            <div class="card-top">
+              <div class="card-media">              <img src="assets/s1-amplificacion.jpg" alt="Parlantes activos y sub bajos profesionales" loading="lazy"></div>
+              <span class="card-icon"><svg class="icon"><use href="#i-speaker"/></svg></span>
+            </div>
+            <div class="card-body">
+              <h3><span class="num">01.</span> <span class="t1">Amplificación</span><span class="t2">Profesional</span></h3>
+              <ul class="list">
+                <li>Sub bajos activos</li>
+                <li>Parlantes activos</li>
+                <li>Mesa de sonido</li>
+                <li>Micrófonos inalámbricos</li>
+                <li>Configuración y operación del sistema</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--d:.08s">
+            <div class="card-top">
+              <div class="card-media">              <img src="assets/s2-iluminacion.jpg" alt="Escenario con luces robóticas beam de colores" loading="lazy"></div>
+              <span class="card-icon"><svg class="icon"><use href="#i-bulb"/></svg></span>
+            </div>
+            <div class="card-body">
+              <h3><span class="num">02.</span> <span class="t1">Iluminación</span><span class="t2">Profesional</span></h3>
+              <ul class="list">
+                <li>Robóticas Beam &amp; Spot</li>
+                <li>PAR LED RGBW</li>
+                <li>Spider Beam</li>
+                <li>Efectos láser</li>
+                <li>PAR LED</li>
+                <li>Iluminación flúor</li>
+                <li>Diseño de atmósferas personalizadas</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--d:.16s">
+            <div class="card-top">
+              <div class="card-media">              <img src="assets/s3-dj.jpg" alt="Animador de GAM Producciones con micrófono junto a la cabina DJ" loading="lazy"></div>
+              <span class="card-icon"><svg class="icon"><use href="#i-mic"/></svg></span>
+            </div>
+            <div class="card-body">
+              <h3><span class="num">03.</span> <span class="t1">DJ &amp; Animación</span><span class="t2">Profesional</span></h3>
+              <h4>Servicio DJ</h4>
+              <ul class="list">
+                <li>DJ profesional</li>
+                <li>Equipamiento completo</li>
+                <li>Set musical personalizado</li>
+                <li>Musicalización del evento</li>
+                <li>Adaptación en tiempo real</li>
+              </ul>
+              <h4>Animación profesional</h4>
+              <ul class="list">
+                <li>Conducción del evento</li>
+                <li>Interacción con el público</li>
+                <li>Dinámicas, juegos y concursos</li>
+                <li>Activación de pista</li>
+                <li>Coordinación con DJ, iluminación y efectos</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <div class="card-media">              <img src="assets/s4-360.jpg" alt="Invitadas posando sobre la plataforma 360 con aro de luz" loading="lazy"></div>
+              <span class="card-icon"><svg class="icon"><use href="#i-360"/></svg></span>
+            </div>
+            <div class="card-body">
+              <h3><span class="num">04.</span> <span class="t1">Plataforma 360°</span><span class="t2">Video interactivo</span></h3>
+              <ul class="list">
+                <li>Plataforma 360</li>
+                <li>Iluminación LED</li>
+                <li>Corredores de fila</li>
+                <li>Máquina de humo</li>
+                <li>Operación durante el evento</li>
+                <li>Grabación de videos</li>
+                <li>Experiencia interactiva para invitados</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--d:.08s">
+            <div class="card-top">
+              <div class="card-media">              <img src="assets/s5-efectos.jpg" alt="Tres máquinas de chispa fría encendidas" loading="lazy"></div>
+              <span class="card-icon"><svg class="icon"><use href="#i-sparkles"/></svg></span>
+            </div>
+            <div class="card-body">
+              <h3><span class="num">05.</span> <span class="t1">Efectos</span><span class="t2">Especiales</span></h3>
+              <ul class="list">
+                <li>Máquinas de chispa fría</li>
+                <li>Ideal para entradas, presentaciones y shows</li>
+                <li>Impacto visual en momentos especiales</li>
+                <li>Perfecto para fotos y videos</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--d:.16s">
+            <div class="card-top">
+              <div class="card-media">              <img src="assets/s6-fotografia.jpg" alt="Fotógrafo de GAM Producciones cubriendo un evento" loading="lazy"></div>
+              <span class="card-icon"><svg class="icon"><use href="#i-camera"/></svg></span>
+            </div>
+            <div class="card-body">
+              <h3><span class="num">06.</span> <span class="t1">Fotografía</span><span class="t2">Profesional</span></h3>
+              <ul class="list">
+                <li>Cobertura fotográfica profesional</li>
+                <li>Registro de momentos especiales</li>
+                <li>Fotos espontáneas de invitados</li>
+                <li>Registro de ambientación</li>
+                <li class="note">Servicio sujeto a confirmación</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integral production -->
+    <section class="section integral" id="produccion">
+      <div class="wrap integral-grid">
+        <div class="integral-media reveal">
+          <img src="assets/s7-produccion.jpg" alt="Escenario de concierto con producción completa de luces" loading="lazy">
+          <span class="tag" aria-hidden="true"><span>07</span>.</span>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <span class="eyebrow">07 · Producción integral</span>
+          <div class="section-head" style="margin-bottom:22px">
+            <h2>Un solo equipo.<br><span class="red">Cero preocupaciones.</span></h2>
+          </div>
+          <p class="lead">Integramos todos nuestros servicios para entregar una experiencia completa, coordinada y sin preocupaciones.</p>
+          <ul class="chips">
+            <li><svg class="icon"><use href="#i-speaker"/></svg>Sonido</li>
+            <li><svg class="icon"><use href="#i-bulb"/></svg>Iluminación</li>
+            <li><svg class="icon"><use href="#i-headphones"/></svg>DJ + Animación</li>
+            <li><svg class="icon"><use href="#i-360"/></svg>Experiencias</li>
+            <li><svg class="icon"><use href="#i-sparkles"/></svg>Efectos</li>
+            <li><svg class="icon"><use href="#i-camera"/></svg>Fotografía*</li>
+          </ul>
+          <p class="fineprint">*Sujeto a confirmación</p>
+          <a class="btn btn-primary" href="#contacto">Cotiza tu producción completa <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section events" id="eventos">
+      <div class="events-bg" aria-hidden="true"><img src="assets/s8-eventos.jpg" alt="" loading="lazy"></div>
+      <div class="wrap">
+        <div class="section-head reveal" style="margin-inline:auto;text-align:center">
+          <span class="eyebrow">08 · Eventos para cada ocasión</span>
+          <h2>Tu celebración, <span class="red">a tu medida</span></h2>
+          <p>Desde una fiesta íntima hasta un evento corporativo: adaptamos la producción a cada formato.</p>
+        </div>
+        <div class="events-grid">
+          <article class="event reveal"><span class="ring"><svg class="icon"><use href="#i-rings"/></svg></span><h3>Matrimonios</h3></article>
+          <article class="event reveal" style="--d:.06s"><span class="ring"><svg class="icon"><use href="#i-building"/></svg></span><h3>Eventos corporativos</h3></article>
+          <article class="event reveal" style="--d:.12s"><span class="ring"><svg class="icon"><use href="#i-party"/></svg></span><h3>Fiestas privadas</h3></article>
+          <article class="event reveal" style="--d:.18s"><span class="ring"><svg class="icon"><use href="#i-mask"/></svg></span><h3>Fiestas temáticas</h3></article>
+          <article class="event reveal" style="--d:.24s"><span class="ring"><svg class="icon"><use href="#i-cake"/></svg></span><h3>Celebraciones</h3></article>
+        </div>
+        <p class="events-note reveal"><strong>Soluciones adaptadas</strong> a cada formato y necesidad.</p>
+      </div>
+    </section>
+
+    <!-- Why GAM -->
+    <section class="section" id="nosotros">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Por qué GAM</span>
+          <h2>Más de 100 eventos <span class="red">nos respaldan</span></h2>
+          <p>Somos una productora de Lebu que pone la técnica, la música y la energía para que tú solo te preocupes de disfrutar.</p>
+        </div>
+        <div class="values reveal">
+          <div class="value"><svg class="icon"><use href="#i-users"/></svg><div><h3>Calidad técnica</h3><p>Equipamiento profesional de última generación.</p></div></div>
+          <div class="value"><svg class="icon"><use href="#i-clipboard"/></svg><div><h3>Experiencia</h3><p>Más de 100 eventos realizados con éxito.</p></div></div>
+          <div class="value"><svg class="icon"><use href="#i-headphones"/></svg><div><h3>Entretenimiento</h3><p>DJ + animación profesional que conecta.</p></div></div>
+          <div class="value"><svg class="icon"><use href="#i-handshake"/></svg><div><h3>Compromiso</h3><p>Dedicación total en cada detalle de tu evento.</p></div></div>
+          <div class="value"><svg class="icon"><use href="#i-sliders"/></svg><div><h3>Adaptabilidad</h3><p>Propuestas flexibles según tu presupuesto y necesidades.</p></div></div>
+          <div class="value"><svg class="icon"><use href="#i-star"/></svg><div><h3>Resultados</h3><p>Creamos experiencias que se recuerdan.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <section class="section social" id="redes">
+      <div class="wrap social-grid">
+        <div class="reveal">
+          <span class="eyebrow">Síguenos</span>
+          <div class="section-head" style="margin-bottom:0">
+            <h2>Vive la fiesta <span class="red">en nuestras redes</span></h2>
+          </div>
+          <div class="profile">
+            <span class="avatar"><span>G<b>A</b>M</span></span>
+            <div>
+              <strong>@gamproduccioneslebu</strong>
+              <small>Gam Producciones Lebu · Productora de eventos</small>
+            </div>
+          </div>
+          <ul class="bio">
+            <li><svg class="icon"><use href="#i-speaker"/></svg>Amplificación, iluminación y video</li>
+            <li><svg class="icon"><use href="#i-360"/></svg>Plataforma 360°</li>
+            <li><svg class="icon"><use href="#i-sparkles"/></svg>Máquina chispa fría</li>
+            <li><svg class="icon"><use href="#i-music"/></svg>Productor musical</li>
+            <li><svg class="icon"><use href="#i-disc"/></svg>DJs y animadores</li>
+          </ul>
+          <div class="social-ctas">
+            <a class="btn btn-primary" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg> Instagram</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/gamproduccioneslebu" target="_blank" rel="noopener"><svg class="icon"><use href="#i-facebook"/></svg> Facebook</a>
+          </div>
+        </div>
+
+        <div class="highlights reveal" style="--d:.1s" aria-label="Historias destacadas en Instagram">
+          <a class="highlight" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><span class="story"><span><svg class="icon"><use href="#i-party"/></svg></span></span><b>Eventos</b></a>
+          <a class="highlight" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><span class="story"><span><svg class="icon"><use href="#i-disc"/></svg></span></span><b>DJ LeiBRa</b></a>
+          <a class="highlight" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><span class="story"><span><svg class="icon"><use href="#i-layers"/></svg></span></span><b>Servicios</b></a>
+          <a class="highlight" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><span class="story"><span><svg class="icon"><use href="#i-music"/></svg></span></span><b>Producción</b></a>
+          <a class="highlight" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><span class="story"><span><svg class="icon"><use href="#i-rocket"/></svg></span></span><b>Lanzamientos</b></a>
+          <a class="highlight" href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><span class="story"><span><svg class="icon"><use href="#i-youtube"/></svg></span></span><b>YouTube</b></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking flyer -->
+    <section class="section">
+      <div class="wrap flyer">
+        <a class="flyer-img reveal" href="assets/booking-2026.jpg" target="_blank" rel="noopener" aria-label="Ver flyer Booking 2026 en tamaño completo">
+          <img src="assets/booking-2026.jpg" alt="Flyer Booking 2026 de GAM Producciones con todos los servicios" loading="lazy">
+        </a>
+        <div class="reveal" style="--d:.1s">
+          <span class="eyebrow">Temporada 2026</span>
+          <h2>Agenda <span class="red">abierta</span></h2>
+          <p>Las fechas se reservan por orden de confirmación. Revisa nuestro brochure con todos los servicios y asegura la tuya con tiempo.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contacto">Reservar fecha <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="assets/booking-2026.jpg" download="GAM-Producciones-Booking-2026.jpg"><svg class="icon"><use href="#i-download"/></svg> Descargar brochure</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contacto" style="padding-top:40px">
+      <div class="wrap contact-grid">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Hablemos</span>
+          <h2>Contáctanos</h2>
+          <svg class="pulse-line" viewBox="0 0 320 28" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14h150l6-10 8 20 8-24 7 22 5-8h136"/></svg>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/56957602438" target="_blank" rel="noopener"><svg class="icon" style="fill:currentColor;stroke:none"><use href="#i-whatsapp"/></svg><span class="ct"><small>WhatsApp / Teléfono</small><b>+56 9 5760 2438</b></span></a></li>
+            <li><a href="mailto:gamproduccioneslebu@gmail.com"><svg class="icon"><use href="#i-mail"/></svg><span class="ct"><small>Correo</small><b>gamproduccioneslebu@gmail.com</b></span></a></li>
+            <li><a href="mailto:gabriel.millanaot@gmail.com"><svg class="icon"><use href="#i-mail"/></svg><span class="ct"><small>Correo</small><b>gabriel.millanaot@gmail.com</b></span></a></li>
+            <li><a href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg><span class="ct"><small>Instagram</small><b>@gamproduccioneslebu</b></span></a></li>
+            <li><div><svg class="icon"><use href="#i-pin"/></svg><span class="ct"><small>Base de operaciones</small><b>Lebu, Región del Biobío, Chile</b></span></div></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="quote-form" style="--d:.1s" novalidate>
+          <h3>Cotiza tu evento</h3>
+          <p>Completa los datos y te respondemos a la brevedad por WhatsApp o correo.</p>
+          <div class="fields">
+            <div class="field">
+              <label for="f-name">Nombre</label>
+              <input id="f-name" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-type">Tipo de evento</label>
+              <select id="f-type" name="tipo">
+                <option>Matrimonio</option>
+                <option>Evento corporativo</option>
+                <option>Fiesta privada</option>
+                <option>Fiesta temática</option>
+                <option>Celebración</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-date">Fecha</label>
+              <input id="f-date" name="fecha" type="date">
+            </div>
+            <div class="field">
+              <label for="f-place">Lugar / comuna</label>
+              <input id="f-place" name="lugar" type="text" placeholder="Ej: Lebu">
+            </div>
+            <fieldset class="field full">
+              <legend>Servicios de interés</legend>
+              <div class="checks">
+                <label><input type="checkbox" name="servicios" value="Amplificación"><span>Amplificación</span></label>
+                <label><input type="checkbox" name="servicios" value="Iluminación"><span>Iluminación</span></label>
+                <label><input type="checkbox" name="servicios" value="DJ"><span>DJ</span></label>
+                <label><input type="checkbox" name="servicios" value="Animación"><span>Animación</span></label>
+                <label><input type="checkbox" name="servicios" value="Plataforma 360"><span>Plataforma 360°</span></label>
+                <label><input type="checkbox" name="servicios" value="Chispa fría"><span>Chispa fría</span></label>
+                <label><input type="checkbox" name="servicios" value="Fotografía"><span>Fotografía</span></label>
+                <label><input type="checkbox" name="servicios" value="Producción integral"><span>Producción integral</span></label>
+              </div>
+            </fieldset>
+            <div class="field full">
+              <label for="f-msg">Cuéntanos más</label>
+              <textarea id="f-msg" name="mensaje" placeholder="Cantidad de invitados, horario, ideas…"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" data-channel="wa"><svg class="icon" style="fill:currentColor;stroke:none"><use href="#i-whatsapp"/></svg> Enviar por WhatsApp</button>
+            <button class="btn btn-ghost" type="submit" data-channel="mail"><svg class="icon"><use href="#i-mail"/></svg> Enviar por correo</button>
+          </div>
+          <p class="form-hint" id="form-hint" aria-live="polite">Se abrirá WhatsApp o tu correo con el mensaje listo para enviar.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <img src="assets/logo.webp" alt="GAM Producciones" width="494" height="194" loading="lazy">
+          <div class="slogan">Creamos experiencias. Generamos emociones.</div>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/gamproduccioneslebu/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+          <a href="https://www.facebook.com/gamproduccioneslebu" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon"><use href="#i-facebook"/></svg></a>
+          <a href="https://wa.me/56957602438" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" style="fill:currentColor;stroke:none"><use href="#i-whatsapp"/></svg></a>
+          <a href="mailto:gamproduccioneslebu@gmail.com" aria-label="Correo"><svg class="icon"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> GAM Producciones · Lebu, Chile</span>
+        <nav aria-label="Pie de página">
+          <a href="#servicios">Servicios</a><a href="#eventos">Eventos</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/56957602438?text=Hola%20GAM%20Producciones%2C%20quiero%20cotizar%20un%20evento" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg class="icon"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <script>
+    (() => {
+      const PHONE = '56957602438';
+      const EMAIL = 'gamproduccioneslebu@gmail.com';
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.menu-toggle');
+      const links = document.getElementById('nav-links');
+
+      // Header background on scroll
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Mobile menu
+      const setMenu = (open) => {
+        links.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+        toggle.querySelector('use').setAttribute('href', open ? '#i-close' : '#i-menu');
+      };
+      toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+      links.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+      // Reveal on scroll
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach((el) => io.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add('in'));
+      }
+
+      // Count-up stats
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const counters = document.querySelectorAll('[data-count]');
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        const co = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const end = Number(el.dataset.count);
+            const start = performance.now();
+            const dur = 1400;
+            const tick = (now) => {
+              const p = Math.min(1, (now - start) / dur);
+              el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            el.textContent = '0';
+            requestAnimationFrame(tick);
+            co.unobserve(el);
+          });
+        }, { threshold: 0.6 });
+        counters.forEach((el) => co.observe(el));
+      }
+
+      // Active nav link
+      const navAnchors = [...links.querySelectorAll('a:not(.btn)')];
+      const sections = navAnchors.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+      const updateActive = () => {
+        const y = window.innerHeight * 0.4;
+        const current = sections.find((s) => {
+          const r = s.getBoundingClientRect();
+          return r.top <= y && r.bottom > y;
+        });
+        navAnchors.forEach((a) => a.classList.toggle('active', !!current && a.hash === '#' + current.id));
+      };
+      updateActive();
+      window.addEventListener('scroll', updateActive, { passive: true });
+
+      // Quote form -> WhatsApp or e-mail with a pre-filled message
+      const form = document.getElementById('quote-form');
+      const hint = document.getElementById('form-hint');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const name = (data.get('nombre') || '').trim();
+        if (!name) {
+          hint.textContent = 'Por favor, escribe tu nombre para continuar.';
+          form.querySelector('#f-name').focus();
+          return;
+        }
+        let fecha = data.get('fecha');
+        if (fecha) {
+          const [y, m, d] = fecha.split('-');
+          fecha = `${d}/${m}/${y}`;
+        }
+        const servicios = data.getAll('servicios');
+        const lugar = (data.get('lugar') || '').trim();
+        const mensaje = (data.get('mensaje') || '').trim();
+        const details = [
+          `• Tipo de evento: ${data.get('tipo')}`,
+          fecha && `• Fecha: ${fecha}`,
+          lugar && `• Lugar: ${lugar}`,
+          servicios.length && `• Servicios: ${servicios.join(', ')}`,
+          mensaje && `• Detalles: ${mensaje}`,
+        ].filter(Boolean);
+        const text = `Hola GAM Producciones, soy ${name} y quiero cotizar un evento.\n\n${details.join('\n')}`;
+        const channel = e.submitter?.dataset.channel || 'wa';
+        if (channel === 'mail') {
+          const subject = `Cotización evento – ${data.get('tipo')}${fecha ? ' – ' + fecha : ''}`;
+          window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+          hint.textContent = 'Abriendo tu aplicación de correo…';
+        } else {
+          window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+          hint.textContent = 'Abriendo WhatsApp con tu mensaje…';
+        }
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

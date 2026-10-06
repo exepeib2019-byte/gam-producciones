@@ -1,0 +1,10 @@
+# Local tooling
+.claude/
+.netlify/
+
+# Original flyer from WhatsApp (published copy lives in assets/booking-2026.jpg)
+WhatsApp Image*.jpeg
+
+# OS files
+Thumbs.db
+desktop.ini
